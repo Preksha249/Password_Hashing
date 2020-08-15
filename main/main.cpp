@@ -46,7 +46,7 @@ class admin: public user
 void display(admin obj)
  {      
       //hashing(obj.password);
- 	cout<<"\t"<<left<<setw(28)<<obj.email_id<<left<<setw(28)<<obj.password<<endl;
+ 	cout<<"\t"<<left<<setw(28)<<obj.email_id<<left<<setw(28)<<obj.password<<left<<setw(28)<<obj.working<<endl;
  }
 
 int main()
@@ -94,24 +94,20 @@ int main()
                            cin>>key;
                            for(j=0;j<count;j++)
                               { if(key-1==j)
-                                  {flag=1;
+                                  {ob1[key-1].sdata();
                                     break;
                                    }
                                // else
                                  //  {cout<<"\n\t\t!!!!NO EMPLOYEE WITH SUCH ID FOUND!!!!\n";
                                    //   cout<<"\t\t    ~~~~~SO PLEASE TRY AGAIN~~~~~";
                                     //}
-                              }
-                   if(flag==1)
-                    { ob1[key-1].sdata();
-                      flag=0;
-                      // break;
-                     }
+                              
+                  
                     else
                       {cout<<"\n\t\t!!!!NO EMPLOYEE WITH SUCH ID FOUND!!!!\n";
-                       cout<<"\t\t    ~~~~~SO PLEASE TRY AGAIN~~~~~";
+                        cout<<"\t\t    ~~~~~SO PLEASE TRY AGAIN~~~~~";
                       }
-                     
+			      }	       
 		              break;
                  case 3:cout<<"ENTER ADMIN PASSWORD: ";
 			   cin>>password_check;
